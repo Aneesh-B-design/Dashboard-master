@@ -22,6 +22,10 @@ const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
+  // const change = () => {
+  //   style = {{display: "none"}}; m,
+  // }
+
   return (
     <>
       {isMobile ? (
@@ -52,12 +56,12 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </Link>
-          {/* <Link to="/products" style={{ textDecoration: "none" }}>
+          <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
               <span>Products</span>
             </li>
-          </Link> */}
+          </Link>
           <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>
@@ -67,10 +71,12 @@ const Sidebar = () => {
             <span>Delivery</span>
           </li>
           <p className="title">USEFUL</p>
+          {/* <Link to = "/stats">
           <li>
             <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
+          </Link> */}
           <li>
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
@@ -125,10 +131,13 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
+        <Link to="/" style={{ textDecoration: "none" }}>
+
           <li>
             <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
+          </Link>
           <p className="title">LISTS</p>
           <Link to="/users" style={{ textDecoration: "none" }}>
             <li>
@@ -136,51 +145,55 @@ const Sidebar = () => {
               <span>Users</span>
             </li>
           </Link>
-          <Link to="/products" style={{ textDecoration: "none" }}>
+          {/* <Link to="/products" style={{ textDecoration: "none" }}>
             <li>
               <StoreIcon className="icon" />
               <span>Products</span>
             </li>
-          </Link>
-          <li>
+          </Link> */}
+          {/* <li>
             <CreditCardIcon className="icon" />
             <span>Orders</span>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <LocalShippingIcon className="icon" />
             <span>Delivery</span>
-          </li>
+          </li> */}
           <p className="title">USEFUL</p>
+          <Link to = "/stats" style={{textDecoration: "none"}}>
           <li>
             <InsertChartIcon className="icon" />
             <span>Stats</span>
           </li>
-          <li>
+          </Link>
+          {/* <li>
             <NotificationsNoneIcon className="icon" />
             <span>Notifications</span>
-          </li>
-          <p className="title">SERVICE</p>
+          </li> */}
+          {/* <p className="title">SERVICE</p>
           <li>
             <SettingsSystemDaydreamOutlinedIcon className="icon" />
             <span>System Health</span>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <PsychologyOutlinedIcon className="icon" />
             <span>Logs</span>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <SettingsApplicationsIcon className="icon" />
             <span>Settings</span>
-          </li>
+          </li> */}
           <p className="title">USER</p>
           <li>
             <AccountCircleOutlinedIcon className="icon" />
             <span>Profile</span>
           </li>
+          <Link to= "new">
           <li>
             <ExitToAppIcon className="icon" />
             <span>Logout</span>
           </li>
+          </Link>
         </ul>
       </div>
       <div className="bottom">

@@ -3,12 +3,12 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
+import Stats from "./pages/stats/Stats";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formSource";
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
-import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -18,7 +18,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/">
-            <Route index element={<Home />} />
+            <Route path = "stats" element = {<Stats/>} />
+          <Route
+                path="new"
+                element={<New inputs={userInputs} title="Add New User" />}
+              />
+
+            <Route index element={ <Home />} />
             <Route path="login" element={<Login />} />
 
             <Route path="home">
